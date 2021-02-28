@@ -6,8 +6,6 @@ This Jekyll plugin for adding tabs. It works with bootstrap 4
 Installation
 ------------
 
-### Install the plugin
-
 Add this line to your Gemfile:
 
 ```ruby
@@ -26,8 +24,6 @@ plugins_dev:
 
 Usage
 -----
-
-### Create tabs
 
 ````
 {% tabs test %}
@@ -55,4 +51,4 @@ end
 {% endtabs %}
 ````
 
-![Image](docs/ttab-screencast.gif)
+![Image](docs/tab-screencast.gif)
