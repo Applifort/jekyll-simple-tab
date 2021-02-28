@@ -32,5 +32,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('tab', Jekyll::Simple::Tab::TabBlock)
-Liquid::Template.register_tag('tab_group', Jekyll::Simple::Tab::TabGroupBlock)
+Liquid::Template.register_tag('tabs', Jekyll::Simple::Tab::TabGroupBlock)
