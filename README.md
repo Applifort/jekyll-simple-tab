@@ -1,4 +1,58 @@
-# Jekyll::Simple::Tab
+Jekyll Simple Tabs
+===========
 
-WIP will relase 1 march 2021
+This Jekyll plugin for adding tabs. It works with bootstrap 4
 
+Installation
+------------
+
+### Install the plugin
+
+Add this line to your Gemfile:
+
+```ruby
+group :jekyll_plugins do
+  
+  gem "jekyll-simple-tab"
+end
+```
+
+Add in you _config.yml:
+
+```yaml
+plugins_dev:
+  - jekyll-simple-tab
+```
+
+Usage
+-----
+
+### Create tabs
+
+````
+{% tabs test %}
+
+{% tab test#first %}
+```ruby
+def render(context)
+  @environment = context.environments.first
+  super
+
+  templateFilePath = template_path(DEFAULT_TEMPLATE)
+  template = Slim::Template.new(templateFilePath)
+  template.render(self)
+end
+```
+{% endtab %}
+
+{% tab test#second %}
+## Header
+
+> Blockquotes
+
+{% endtab %}
+
+{% endtabs %}
+````
+
+![Image](docs/ttab-screencast.gif)
