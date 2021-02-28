@@ -30,8 +30,6 @@ module Jekyll
       end
 
       class TabBlock < Liquid::Block
-        alias_method :render_block, :render
-
         def initialize(tag, args, _)
           super
 
@@ -42,9 +40,11 @@ module Jekyll
         def render(context)
           site = context.registers[:site]
           converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
+          content = converter.convert(super)
+
           environment = context.environments.first
           environment["tabs-#{@tabs_group}"] ||= {}
-          environment["tabs-#{@tabs_group}"][@tab] = converter.convert(super)
+          environment["tabs-#{@tabs_group}"][@tab] = content
         end
 
         private
