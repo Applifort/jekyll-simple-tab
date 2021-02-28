@@ -22,7 +22,6 @@ module Jekyll
         end
 
         def render(context)
-
           templateFile = template_content('tab.slim')
           template = Slim::Template.new(templateFile)
           template.render(scope)
