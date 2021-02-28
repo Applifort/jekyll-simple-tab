@@ -51,4 +51,4 @@ end
 {% endtabs %}
 ````
 
-![Image](docs/tab-screencast.gif)
+![Image](docs/tab-screen.gif)
